@@ -1,0 +1,36 @@
+/* Style général de la page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style du texte */
+.texte {
+  font-size: 2em;
+  position: relative;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Style de la ligne qui apparaît au survol */
+.texte::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+
+/* Effet de survol pour faire apparaître la ligne depuis le centre */
+.texte:hover::after {
+  width: 100%;
+}
